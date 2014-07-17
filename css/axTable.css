@@ -1,0 +1,60 @@
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table.axTable, table.axTable thead, table.axTable tbody, 
+	table.axTable th, table.axTable td, table.axTable tr { 
+		display: block; 
+	}
+	.axTable > tbody > tr > td{
+		padding: 10px;
+	}
+	
+	table.axTable thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	table.axTable td { 
+		position: relative;
+		padding-left: 50% !important; 
+		border-bottom: 0;
+	}
+
+	table.axTable tr:last-child td:last-child{
+		border-bottom: 1px solid #ccc;
+	}
+	.axTable > tbody > tr:nth-of-type(odd) > td { 
+  		background: #eee; 
+	}
+	table.axTable td:before { 
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+	
+}
+
+@media only screen and (min-width: 760px){
+
+	table.axTable td:before{
+		display: none !important;
+	}
+
+}
